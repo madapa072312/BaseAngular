@@ -1,0 +1,321 @@
+Javascript
+	Scripting languaga
+	oo and functionla programming
+	Interpreted not compiled
+	loosly typeed:
+		data type is decided on runtime literal value
+	Event based, callbacks
+	Single threaded
+	-----------------
+	stack
+	Api registery(callback)
+	ArrayBlockQueue--> event queue
+	eventloop --> infinetly checks for the stack is empty then take from queue and pushes to stack.
+---------------------------
+
+Java script engines
+==>V8 engine ==> google ==> used in chrome
+==>SpiderMonkey ==> firefox, adobe products		
+==> Chakra,continum ==> Microsoft
+==> Nashhorn ==> Oracle, Java	
+
+supports ES5 ==> ECMA script 5 version of js
+---------------------
+
+hoisting --> declare varibale nay where is pushing to the function level, not defined by var then it is hoisted to global level
+Scope : global scope
+	function scope
+
+hoistng called implicit
+
+"use strcit"; will not allow implicit variables
+
+==============================
+
+types
+	undefined, numbers, string, boolean, object, array, null
+
+js has semicolon insertion;
+return x+y;
+
+return
+	x+y; ==> return ; x+y;
+
+return {
+x+y;
+}// AST abstract synatx tree
+======================
+
+in Arrays, prefer use push rather than index
+
+==============
+
+Objects in Js:
+best way to set variables is use Object.defineProperty(obj,"id", {"value" : 10 });
+
+1.Constructor pattern:
+object owned instance methods ==> use for singleton pattern
+
+2.Class owned instance methods
+Person.protoptype.getDetails ==> insatnce methods
+
+Person.comapre ==> static  ==> without prototype it becomes static
+
+
+Addy Osmani - JS design patterns
+
+3. JSON : JavaScriptObjectNotation
+
+var Person={
+	id:11,
+	name:"Mahesh",
+	getDetails:function(){
+		return this.id+","+this.name;
+	}
+};
+
+var f = person.getDetails.bind(person);
+f.();
+
+var f = person.getDetails;
+f.call(person);
+
+======================================
+
+Functional style of programming
+
+
+===============
+
+code . will open the visual studio code in the given path
+! <tab> generates the html sudocide
+ctrl+shift+i --> opens the console in chrome
+rxmarbles.com --> gives teh pictorial view.
+
+
+==============================================================
+Closure - function returns a function, in that return function holds the main function arguments
+curying - adder(10)(2)
+
+==============================================
+
+ES6 ==> ECMAScript 2015 ==> ES 2015
+ES7 ==> ESNext
+
+Transpilers ==> to conevrt es6/7 to lower versions
+Babel, Traucer are popular transpilers
+
+===\
+ES6 features
+1. Scope
+	new keywords are let and const
+let for block level scope
+const is is for constants
+
+2. Arrow operator
+
+let add = (x,y) => {
+return x+y;
+}
+
+let sub = (x,y) => x-y;
+
+3. default values in arguments
+
+4. New string literal ``
+var name = "Mahesh";
+var msg = `
+This is a line 1
+thos is line 2
+Name is ${name}
+`;
+
+
+5. Deconstructing
+	A. arrays
+	B. Objects
+
+var [r,b,b,...others] = arr;
+
+var {name,price} = p;
+
+let ob = {"id":1, "name":"s"};
+let r=ob; //reference ==> deep copy
+let mn= {...ob}; //copy ==> shallow copy
+
+6. Class
+
+7. Promise API
+
+	Synchronous
+	function doTask(){
+	}
+	
+let res=doTask();
+
+---------
+Async
+
+doTask().then(
+function(data){
+
+},
+function(rej){
+
+}
+)
+.catch(err){
+}
+ ==================================
+
+
+Generators == uses a separate thread and return value sends to main thread (saga)
+
+=============================================
+
+
+
+Node Js
+provides js environment on top of V8 engine
+a. to write server side Js code
+b. Build rest apis
+c. Use it as environment to develop client side web application
+	Angular React Vue
+
+common things to do before production
+1. Transpile / compile
+2. Minify : remove all blank spaces
+3. Uglify : smaller names to fuctions nad variables
+4. Lint :
+5. run tests
+
+npm i -g typescript
+tsc --version
+
+-------------------------
+
+Day 2:
+
+Webpack: 
+
+Class name and ts file name may or maynot be same
+if you use default in export the {} is not required while importing
+
+
+npm i ==> install the node_modules and dependencies
+npm run build-dev (get the parameter from package.json) ==> Builds and generates the bundle.js and index,html in dist folder (Again this is configuration)
+
+Type script Decorators:[similar to Annotations]
+
+========================
+Angular 9
+----------
+RWD - Responsive web design
+SPA - Single Page Application
+
+SPA will have only one html page and have many templates
+Challenges : 
+	SEO Search Engine Optimization
+	Browser History
+	Security
+		Guard to protect different URI access
+		XSS (Santize before rendering)
+	Dependency Injection
+To overcome challenges we have following library frameworks
+Angular ==> Google (Framework)
+React ==> Facebook (its a template library)
+Backbone (Framework)
+Vue ==>(its a template library)
+
+Ionic Angular ==> will coverts the web applications into mobile app
+
+----------------------
+
+npm i -g @angular/cli ==> to install cli globally (-g) in ng modules
+
+
+Angular Building Blocks
+Module
+Component
+Templates
+Services
+Router
+Guards
+Pipe
+Directives
+
+Component has Selector
+		templateURl
+		styleUrl
+	state and behaviour
+
+wire frimes
+
+Services 
+	Business logic has to implement
+	Interact with backend (RESTApi calls) - CRUD operations
+
+Router
+	Different URI and different views
+
+Modules
+	
+
+
+===========================================
+
+ng new customerapp  --> To create a Angular projects
+ng serve --> to build a angular project
+
+npm -i bootstarp font-awesome@4 ==> to get the 
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
